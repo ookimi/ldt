@@ -141,6 +141,8 @@ class Wiktionary(BaseWiktionary, LexicographicDictionary):
             new_res = {k: v for k, v in dicts.items() if k in relations}
 
             return new_res
+        else:
+            return {}
 
 
 # def dig_deeper(input, field, res):
