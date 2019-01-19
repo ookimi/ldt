@@ -66,5 +66,5 @@ def get_shortest_path(word1, word2):
     """
     try:
         return _get_wn_paths(word1, word2)
-    except timeout_decorator.timeout_decorator.TimeoutError:
+    except AssertionError:
         return 0
