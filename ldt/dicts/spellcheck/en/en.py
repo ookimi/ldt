@@ -299,7 +299,7 @@ class SpellcheckerEn(Spellchecker):
             if word[ind].lower() in inserts and len(inserts) == 1:
                 if word[ind].lower() == word[ind-1].lower():
                     res.append("double_letter_missed")
-                elif len(word) >= ind+1:
+                elif len(word) > ind+1:
                     if word[ind].lower() == word[ind+1].lower():
                         res.append("double_letter_missed")
         return res

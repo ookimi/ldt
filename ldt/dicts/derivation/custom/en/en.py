@@ -96,7 +96,8 @@ class EnglishDerivation(DerivationCustomDict):
 
         if word.endswith("ssion"):
             if self.dictionary.is_a_word(word[:-3]):
-                return word[:-3]
+                res["suffixes"].append("-ion")
+                res["roots"].append(word[:-3])
             else:
                 endings = ["d", "t", "de", "se"]
                 for end in endings:
