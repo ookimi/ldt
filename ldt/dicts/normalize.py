@@ -114,7 +114,9 @@ def turn_to_words(word):
             if subword:
                 res.append(subword)
             subword = ""
-    res.append(subword)
+
+    if subword:
+        res.append(subword)
     return res
 
 class Normalization(MorphMetaDict):
